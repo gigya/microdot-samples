@@ -1,18 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paket", "Paket", "{FEB53434-4B17-4FE0-8A67-4DAE1BDA63A3}"
 	ProjectSection(SolutionItems) = preProject
 		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService", "InventoryService\InventoryService.csproj", "{4AE1119A-E5CF-4C7A-8F9B-3A007E270CF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Interface", "InventoryService.Interface\InventoryService.Interface.csproj", "{D6093F98-8DAD-4C50-B094-773CE49A985A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Grains", "InventoryService.Grains\InventoryService.Grains.csproj", "{C15E880A-B33B-421B-A62B-BA2737E3EA45}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService", "InventoryService\InventoryService.csproj", "{4AE1119A-E5CF-4C7A-8F9B-3A007E270CF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Client", "InventoryService.Client\InventoryService.Client.csproj", "{347A4AF9-1476-473A-8240-AFFA647F7C8D}"
 EndProject
