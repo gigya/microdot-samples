@@ -2,10 +2,10 @@ source https://www.nuget.org/api/v2/
 framework: auto-detect
 
 nuget Gigya.ServiceContract ~> 2.0
-nuget Gigya.Microdot.Interfaces ~> 1.0.0-develop-00078
-nuget Gigya.Microdot.Orleans.Hosting ~> 1.0.0-develop-00078
-nuget Gigya.Microdot.Orleans.Ninject.Host ~> 1.0.0-develop-00078
-nuget Gigya.Microdot.Logging.NLog ~> 1.0.0-develop-00078
-nuget Gigya.Microdot.Ninject ~> 1.0.0-develop-00078
+nuget Gigya.Microdot.Interfaces ~> 1.0
+nuget Gigya.Microdot.Orleans.Hosting ~> 1.0
+nuget Gigya.Microdot.Orleans.Ninject.Host ~> 1.0
+nuget Gigya.Microdot.Logging.NLog ~> 1.0
+nuget Gigya.Microdot.Ninject ~> 1.0
 nuget Microsoft.Orleans.OrleansCodeGenerator
 nuget Microsoft.Orleans.OrleansCodeGenerator.Build
