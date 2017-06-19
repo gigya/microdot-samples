@@ -1,0 +1,4 @@
+﻿[
+	{ "Pattern": ".\\config\\global\\*.config", "Priority": 1 },
+	{ "Pattern": ".\\config\\%ENV%\\*.config", "Priority": 2 }
+]
