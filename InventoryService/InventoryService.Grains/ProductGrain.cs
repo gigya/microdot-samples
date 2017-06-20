@@ -3,6 +3,7 @@ using Gigya.Common.Contracts.Exceptions;
 using InventoryService.Interface;
 using Orleans;
 using System.Threading.Tasks;
+using Gigya.Microdot.Interfaces.Logging;
 
 namespace InventoryService.Grains
 {
@@ -15,10 +16,12 @@ namespace InventoryService.Grains
     public class ProductGrain : Grain, IProductGrain
     {
         protected readonly Func<InventoryConfig> GetConfig;
+        private ILog Log { get; }
 
-        public ProductGrain(Func<InventoryConfig> getConfig)
+        public ProductGrain(Func<InventoryConfig> getConfig, ILog log)
         {
             GetConfig = getConfig;
+            Log = log;
         }
 
         private int CurrentStock { get; set; }
@@ -47,6 +50,7 @@ namespace InventoryService.Grains
                 // TODO: Send low stock warning -or- order more stock.
             }
 
+            Log.Info(_=>_($"Stock updated. Current quantity: {CurrentStock}. Maximum quantity allowed: {config.MaxQuantityInStock}."));
             return Task.CompletedTask;
         }
     }
