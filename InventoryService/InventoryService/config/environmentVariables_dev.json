@@ -1,5 +1,0 @@
-{
-  "ENV": "dev",
-  "GIGYA_CONFIG_PATHS_FILE": ".\\Config\\loadPaths.json",
-  "GIGYA_CONFIG_ROOT": ".\\config\\"
-}

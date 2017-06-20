@@ -37,12 +37,12 @@ namespace InventoryService.Grains
             if (updatedStock < 0)
                 throw new OutOfStockException($"Not enough stock to complete the operation. Only {CurrentStock} items in stock.");
 
-            if (updatedStock > config.MaxItemsInStock)
-                throw new RequestException($"Cannot add stock - operation will cause the stock to exceed maximum of {config.MaxItemsInStock} by {config.MaxItemsInStock - 1000}.");
+            if (updatedStock > config.MaxQuantityInStock)
+                throw new RequestException($"Cannot add stock - operation will cause the stock to exceed maximum of {config.MaxQuantityInStock} by {updatedStock - config.MaxQuantityInStock}.");
 
             CurrentStock = updatedStock;
 
-            if (updatedStock < config.LowStockWarning)
+            if (updatedStock < config.LowStockWarningQuantity)
             {
                 // TODO: Send low stock warning -or- order more stock.
             }
