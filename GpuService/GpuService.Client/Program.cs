@@ -4,7 +4,6 @@ using Gigya.Microdot.Logging.NLog;
 using Ninject;
 using Gigya.Microdot.Ninject;
 using GpuService.Interface;
-using Gigya.Microdot.SharedLogic.Events;
 
 namespace GpuService.Client
 {
@@ -19,19 +18,33 @@ namespace GpuService.Client
                 kernel.Load<NLogModule>();
 
                 IGpuService gpuService = kernel.Get<IGpuService>();
-                TracingContext.SetUpStorage();
+                var random = new Random();
 
-                TracingContext.SetRequestID("--Request #1--");
-                byte[] hashed = gpuService.Hash("SHA256", 3, Encoding.ASCII.GetBytes("test")).Result;
-                Console.Out.WriteLine(BitConverter.ToString(hashed));
-
-                TracingContext.SetRequestID("--Request #2--");
-                hashed = gpuService.Hash("SHA256", 3, Encoding.ASCII.GetBytes("test")).Result;
-                Console.Out.WriteLine(BitConverter.ToString(hashed));
+                while (true)
+                {
+                    byte[] toHash = Encoding.ASCII.GetBytes(random.Next(100).ToString());
+                    byte[] hashed = gpuService.Hash("SHA256", 3, toHash).Result;
+                    CountAndPrint();
+                }
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex);
+            }
+        }
+
+
+        static DateTime stats = DateTime.Now;
+        static long calls = 0;
+
+        static void CountAndPrint()
+        {
+            ++calls;
+            if ((DateTime.Now - stats).TotalSeconds >= 5)
+            {
+                Console.WriteLine($"Rate: {calls / (DateTime.Now - stats).TotalSeconds:0} requests/sec");
+                stats = DateTime.Now;
+                calls = 0;
             }
         }
     }
