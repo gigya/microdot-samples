@@ -16,7 +16,8 @@ namespace GpuService.Client
                 var kernel = new StandardKernel();
                 kernel.Load<MicrodotModule>();
                 kernel.Load<NLogModule>();
-                var gpuService = kernel.Get<IGpuService>();
+
+                IGpuService gpuService = kernel.Get<IGpuService>();
                 byte[] hashed = gpuService.Hash("SHA256", 3, Encoding.ASCII.GetBytes("test")).Result;
                 Console.Out.WriteLine(BitConverter.ToString(hashed));
             }
