@@ -4,18 +4,31 @@ using Gigya.Microdot.Logging.NLog;
 using Ninject;
 using Gigya.Microdot.Ninject;
 using GpuService.Interface;
+using Gigya.Microdot.Interfaces.Configuration;
 
 namespace GpuService.Client
 {
+
+    class HashingSettings : IConfigObject
+    {
+        public string Algorithm { get; set; }
+        public int Rounds { get; set; }
+    }
+
+
+
     class Program
     {
         static void Main(string[] args)
         {
             try
             {
+                Environment.SetEnvironmentVariable("GIGYA_ENVVARS_FILE", "./Configs/envVars.json");
+
                 var kernel = new StandardKernel();
                 kernel.Load<MicrodotModule>();
                 kernel.Load<NLogModule>();
+                var settings = kernel.Get<Func<HashingSettings>>();
 
                 IGpuService gpuService = kernel.Get<IGpuService>();
                 var random = new Random();
@@ -23,7 +36,7 @@ namespace GpuService.Client
                 while (true)
                 {
                     byte[] toHash = Encoding.ASCII.GetBytes(random.Next(100).ToString());
-                    byte[] hashed = gpuService.Hash("SHA256", 3, toHash).Result;
+                    byte[] hashed = gpuService.Hash(settings().Algorithm, settings().Rounds, toHash).Result;
                     CountAndPrint();
                 }
             }

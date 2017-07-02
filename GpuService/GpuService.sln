@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpuService", "GpuService\GpuService.csproj", "{33FC1E7D-B066-4F45-99FE-1EDE2B54F06F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpuService.Interface", "GpuService.Interface\GpuService.Interface.csproj", "{D36ABE93-0E80-4BCF-8411-18B46309D0F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpuService.Client", "GpuService.Client\GpuService.Client.csproj", "{AC5DFB4B-7FA6-4217-BA72-CF483C18DB0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4EE5E9B0-75DC-489C-A0EC-223DD3A974DE}"
+	ProjectSection(SolutionItems) = preProject
+		Configs\Discovery.config = Configs\Discovery.config
+		Configs\envVars.json = Configs\envVars.json
+		Configs\loadPaths.json = Configs\loadPaths.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

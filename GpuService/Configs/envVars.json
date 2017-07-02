@@ -1,0 +1,6 @@
+{
+	DC:'il1',
+	ENV:'prod',
+	CONSUL: 'consul.service.gigya.io:8500',
+	GIGYA_CONFIG_PATHS_FILE:'./Configs/loadPaths.json',
+}
