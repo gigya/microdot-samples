@@ -9,7 +9,7 @@ namespace GpuService
 
     class GpuService: IGpuService
     {
-        public async Task<byte[]> Hash(string algorithm, int rounds, byte[] input)
+        public Task<byte[]> Hash(string algorithm, int rounds, byte[] input)
         {
             switch (algorithm)
             {
@@ -17,7 +17,7 @@ namespace GpuService
                     byte[] result = input;
                     while (rounds-- > 0)
                         result = SHA256.Create().ComputeHash(result);
-                    return result;
+                    return Task.FromResult(result);
                 default: throw new RequestException("Unknown algorithm");
             }
         }
