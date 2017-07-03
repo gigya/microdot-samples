@@ -23,7 +23,9 @@ namespace GpuService.Client
         {
             try
             {
-                Environment.SetEnvironmentVariable("GIGYA_ENVVARS_FILE", "./Configs/envVars.json");
+                Environment.SetEnvironmentVariable("GIGYA_ENVVARS_FILE",      "./Configs/envVars.json");
+                Environment.SetEnvironmentVariable("GIGYA_CONFIG_PATHS_FILE", "./Configs/loadPaths.json");
+                Environment.SetEnvironmentVariable("GIGYA_CONFIG_ROOT",       "./Configs/");
 
                 var kernel = new StandardKernel();
                 kernel.Load<MicrodotModule>();

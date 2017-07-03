@@ -1,10 +1,10 @@
 [
-  {Pattern: 'Configs/*.config',                                 Priority:  1 },
-  {Pattern: 'Configs/services/$(appName)/*.config',             Priority:  2 },
+    {"Pattern": "Configs/*.config",                                 "Priority":  1 },
+    {"Pattern": "Configs/services/$(appName)/*.config",             "Priority":  2 },
   
-  {Pattern: 'Configs/%DC%/*.config',                            Priority:  3 },
-  {Pattern: 'Configs/%DC%/services/$(appName)/*.config',        Priority:  4 },
+    {"Pattern": "Configs/%DC%/*.config",                            "Priority":  3 },
+    {"Pattern": "Configs/%DC%/services/$(appName)/*.config",        "Priority":  4 },
   
-  {Pattern: 'Configs/%DC%/%ENV%/*.config',                      Priority:  5 },
-  {Pattern: 'Configs/%DC%/%ENV%/services/$(appName)/*.config',  Priority:  6 },
+    {"Pattern": "Configs/%DC%/%ENV%/*.config",                      "Priority":  5 },
+    {"Pattern": "Configs/%DC%/%ENV%/services/$(appName)/*.config",  "Priority":  6 }
 ]
