@@ -44,32 +44,32 @@
       <HintPath>..\packages\DataAnnotationsValidator.1.0.0.1\lib\net40\DataAnnotationsValidator.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Gigya.Microdot.Configuration, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Configuration.1.1.1\lib\net451\Gigya.Microdot.Configuration.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Configuration, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Configuration.1.1.2\lib\net451\Gigya.Microdot.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.Hosting, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Hosting.1.1.1\lib\net451\Gigya.Microdot.Hosting.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Hosting, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Hosting.1.1.2\lib\net451\Gigya.Microdot.Hosting.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.Interfaces, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Interfaces.1.1.1\lib\net451\Gigya.Microdot.Interfaces.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Interfaces, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Interfaces.1.1.2\lib\net451\Gigya.Microdot.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.Logging.NLog, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Logging.NLog.1.1.1\lib\net451\Gigya.Microdot.Logging.NLog.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Logging.NLog, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Logging.NLog.1.1.2\lib\net451\Gigya.Microdot.Logging.NLog.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.Ninject, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Ninject.1.1.1\lib\net451\Gigya.Microdot.Ninject.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Ninject, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Ninject.1.1.2\lib\net451\Gigya.Microdot.Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.Ninject.Host, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.Ninject.Host.1.1.1\lib\net451\Gigya.Microdot.Ninject.Host.dll</HintPath>
+    <Reference Include="Gigya.Microdot.Ninject.Host, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.Ninject.Host.1.1.2\lib\net451\Gigya.Microdot.Ninject.Host.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.ServiceDiscovery, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.ServiceDiscovery.1.1.1\lib\net451\Gigya.Microdot.ServiceDiscovery.dll</HintPath>
+    <Reference Include="Gigya.Microdot.ServiceDiscovery, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.ServiceDiscovery.1.1.2\lib\net451\Gigya.Microdot.ServiceDiscovery.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.ServiceProxy, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.ServiceProxy.1.1.1\lib\net451\Gigya.Microdot.ServiceProxy.dll</HintPath>
+    <Reference Include="Gigya.Microdot.ServiceProxy, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.ServiceProxy.1.1.2\lib\net451\Gigya.Microdot.ServiceProxy.dll</HintPath>
     </Reference>
-    <Reference Include="Gigya.Microdot.SharedLogic, Version=1.1.1.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gigya.Microdot.SharedLogic.1.1.1\lib\net451\Gigya.Microdot.SharedLogic.dll</HintPath>
+    <Reference Include="Gigya.Microdot.SharedLogic, Version=1.1.2.162, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gigya.Microdot.SharedLogic.1.1.2\lib\net451\Gigya.Microdot.SharedLogic.dll</HintPath>
     </Reference>
     <Reference Include="Gigya.ServiceContract, Version=2.4.10.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gigya.ServiceContract.2.4.10\lib\net451\Gigya.ServiceContract.dll</HintPath>
