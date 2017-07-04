@@ -10,7 +10,7 @@ using System.Text;
 namespace AccountsService
 {
 
-    interface IAccountGrain : IGrainWithStringKey
+    public interface IAccountGrain : IGrainWithStringKey
     {
         Task SaveAccount(Account account);
         Task<Account> GetAccount();
@@ -18,7 +18,7 @@ namespace AccountsService
     }
 
 
-    class AccountGrain : Grain, IAccountGrain
+    public class AccountGrain : Grain, IAccountGrain
     {
         Account state;
         IGpuService gpuService;
