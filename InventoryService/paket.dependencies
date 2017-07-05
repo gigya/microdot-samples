@@ -9,3 +9,6 @@ nuget Gigya.Microdot.Logging.NLog ~> 1.0
 nuget Gigya.Microdot.Ninject ~> 1.0
 nuget Microsoft.Orleans.OrleansCodeGenerator
 nuget Microsoft.Orleans.OrleansCodeGenerator.Build
+
+# Version is pinned to 1.0.0.1 because newer version introduced a breaking change 
+nuget DataAnnotationsValidator 1.0.0.1
