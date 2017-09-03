@@ -77,6 +77,9 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.7'">
       <ItemGroup>
+        <Reference Include="System.ComponentModel.DataAnnotations">
+          <Paket>True</Paket>
+        </Reference>
         <Reference Include="DataAnnotationsValidator">
           <HintPath>..\packages\DataAnnotationsValidator\lib\net40\DataAnnotationsValidator.dll</HintPath>
           <Private>True</Private>
@@ -309,9 +312,6 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.7'">
       <ItemGroup>
-        <Reference Include="System.ComponentModel.DataAnnotations">
-          <Paket>True</Paket>
-        </Reference>
         <Reference Include="mscorlib">
           <Paket>True</Paket>
         </Reference>
@@ -334,4 +334,5 @@
       </ItemGroup>
     </When>
   </Choose>
+  <Import Project="..\packages\NETStandard.Library\build\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library\build\NETStandard.Library.targets')" Label="Paket" />
 </Project>

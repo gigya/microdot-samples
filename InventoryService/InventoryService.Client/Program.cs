@@ -2,6 +2,7 @@
 using Gigya.Microdot.Ninject;
 using Ninject;
 using System;
+using Gigya.Microdot.SharedLogic;
 
 namespace InventoryService.Client
 {
@@ -12,6 +13,10 @@ namespace InventoryService.Client
             Environment.SetEnvironmentVariable("GIGYA_CONFIG_ROOT", Environment.CurrentDirectory);
             Environment.SetEnvironmentVariable("GIGYA_CONFIG_PATHS_FILE", "");
             Environment.SetEnvironmentVariable("GIGYA_ENVVARS_FILE", Environment.CurrentDirectory);
+            Environment.SetEnvironmentVariable("DC", "global");
+            Environment.SetEnvironmentVariable("ENV", "dev");
+
+            CurrentApplicationInfo.Init("InventoryService.Client");
 
             var kernel = new StandardKernel();
             kernel.Load<MicrodotModule>();
