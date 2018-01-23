@@ -4,6 +4,7 @@ using Gigya.Microdot.Ninject.Host;
 using Gigya.Microdot.SharedLogic;
 using GpuService.Interface;
 using Ninject;
+using System;
 
 namespace GpuService
 {
@@ -12,6 +13,9 @@ namespace GpuService
     {
         static void Main(string[] args)
         {
+            Environment.SetEnvironmentVariable("GIGYA_CONFIG_ROOT", Environment.CurrentDirectory);
+            Environment.SetEnvironmentVariable("GIGYA_ENVVARS_FILE", "envVars.json");
+
             new GpuServiceHost().Run();
         }
 
